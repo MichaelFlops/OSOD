@@ -1,7 +1,10 @@
-diskOutdated = false
-renderOutdated = true
+diskOutdated = false #boolean
+renderOutdated = true #boolean
 
+
+#converter is a constructor that creates a converter object. Call this object's makeHtml method to #turn Markdown into HTML:
 converter = new Markdown.Converter()
+
 markdown = (s) -> converter.makeHtml(s)
 
 code = """
