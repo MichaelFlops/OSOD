@@ -1,7 +1,17 @@
 # Open Source Interactive Books
 ### Original repo: https://github.com/hackucsc-ctm-2015/ctm
 
+__NOTE__ This repo is an alaysis / explanation of the system, as well as general improvements
 
+getting stared:
+`git clone https://github.com/MichaelFlops/OSOD`
+`npm install`
+`grunt serve`
+
+
+__________________________________________________________
+				ORIGINAL REPO BELOW
+__________________________________________________________
 # ctm
 # OSLDB: The Open Source Literate Dynabook
 <span><img width=100px src="alankay.png"> <img width=100px src="rstallman.png"><img width=100px src="dknuth.png"></span>
