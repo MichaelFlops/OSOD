@@ -5,6 +5,13 @@ converter = new Markdown.Converter()
 markdown = (s) -> converter.makeHtml(s)
 
 code = """
+### to run locally, clone the repo and run:
+`npm install`
+
+`grunt serve`
+
+#### understanding the code
+
 ## Bouncing ball
 
 The **gravitational force** will accelerate an object starting at a certain
