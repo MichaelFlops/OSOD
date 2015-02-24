@@ -1,3 +1,7 @@
+# Open Source Interactive Books
+### Original repo: https://github.com/hackucsc-ctm-2015/ctm
+
+
 # ctm
 # OSLDB: The Open Source Literate Dynabook
 <span><img width=100px src="alankay.png"> <img width=100px src="rstallman.png"><img width=100px src="dknuth.png"></span>
