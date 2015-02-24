@@ -12,8 +12,7 @@ getting stared:
 `grunt serve`
 
 
-__________________________________________________________
-				ORIGINAL README BELOW
+## Original ReadMe below:
 
 # ctm
 # OSLDB: The Open Source Literate Dynabook
