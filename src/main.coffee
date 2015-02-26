@@ -2,22 +2,30 @@ diskOutdated = false #boolean
 renderOutdated = true #boolean
 
 
-#converter is a constructor that creates a converter object. Call this object's makeHtml method to #turn Markdown into HTML:
+#converter is a constructor that creates a converter object. 
+#Call this object's makeHtml method to #turn Markdown into HTML:
 converter = new Markdown.Converter()
 
 markdown = (s) -> converter.makeHtml(s)
 
 code = """
-### to run locally, clone the repo and run:
+
+## What ctm is
+Ctm is a file format for storing 3D triangle 
+meshes in a compact and versatile way.
+
+#### To run locally, clone the repo and run:
 `npm install`
 
 `grunt serve`
 
-#### understanding the code
+# Understanding the code
 
-## Bouncing ball
+This project primarily relies on codeMirror 
+to generate a text editor in the browser
+## Example 1: Bouncing ball
 
-The **gravitational force** will accelerate an object starting at a certain
+The **gravitational force** will accelerate an object starting at a certain 
 height.
 
 Gravity (0-10, Earth surface would be about 9.81):
