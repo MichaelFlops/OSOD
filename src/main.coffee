@@ -1,3 +1,38 @@
+# total = 0
+# count = 1
+# while count <= 10
+#   total += count
+#   count += 1
+# total
+
+# total = 0
+# total += count for count in [1..10]
+# console.log total
+
+
+# sum = (v) -> _.reduce v, ((a,b) -> a+b), 0
+# sum[1..10]
+# console.log sum
+
+# Array::sum = -> @reduce
+
+# me = 115 * 4 - 4 + 88 / 2
+# console.log me
+
+# me = (4 >= 6 or 'grass' isnt 'green') and not(12 * 2 is 144 and true)
+# console.log me
+
+# penis = Math.max 2, 4
+# console.log penis
+
+confirm 'shall we, then?', (answer) -> answer
+# shit = [1..10]
+# console.log shit
+
+# [1..10].map (i) -> i*2
+
+## shit starts
+
 diskOutdated = false #boolean
 renderOutdated = true #boolean
 
