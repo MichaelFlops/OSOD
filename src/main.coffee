@@ -100,9 +100,47 @@
 #use show to say something praising. If it is '3' or '5', say 'almost!'.
 # in other cases, say something mean!
 
-prompt 'hey'
+# prompt "what is 2 + 2", '', (answer) ->
+#   if answer is '4'
+#     console.log 'good job, son'
+#   else if answer is '3' or answer is '5'
+#     console.log 'Almost!'
+#   else
+#     console.log 'no jackass!'
 
+# fun = on
+# console.log 'the show must go on!' unless fun is off
 
+# current = 20
+# loop
+#   if current % 8 is 0
+#     break
+#   current++
+# console.log current
+
+# EXERCISE 6
+###
+Pick a lucky num from 1 to 6 then keep rolling a simulated die, until
+your lucky number comes up. Count te number of rolls. Use a loop and
+optionally a break. 
+###
+
+# luckyNum = 3
+# loop
+#   roll = Math.floor Math.random() * 6 + 1
+#   console.log roll
+#   if roll is luckyNum
+#     break
+
+# # Book's version:
+# luckyNumber = 5 # Choose  from 1 to 6
+# console.log "Your lucky number is #{luckyNumber}"
+# count = 0
+# loop
+#   console.log roll = Math.floor Math.random() * 6 + 1
+#   count++
+#   if roll is luckyNumber then break
+# console.log "Luck took #{count} roll(s)"    
 
 
 
