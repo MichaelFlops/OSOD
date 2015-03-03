@@ -54,7 +54,6 @@
 # console.log runOnDemand()
 # end of exercise 2
 
-
 # EXERCISE 3
 # Draw a triangle by printing out 10 lines, each with a new "#"
 # tri = ''
@@ -72,25 +71,48 @@
 # tri = '1'
 # i = 0
 # x = 10
-# runOnDemand = -> 
+# runOnDemand = ->
 #   for count in [i...x]
 #     tri = tri + '#'
 #     console.log tri
 # runOnDemand()
 
-for counter in [0..20]
-  if counter % 3 is 0 and counter % 4 is 0
-    console.log counter
+# for counter in [0..20]
+#   if counter % 3 is 0 and counter % 4 is 0
+#     console.log counter
 
-console.log 40 % 10
+# for counter in [0...10]
+#   if counter % 4 is 0
+#     console.log counter
+#   if counter % 4 isnt 0
+#     console.log '(' + counter + ')'
 
-## shit starts
+# for counter in [0..20]
+#   if counter > 15
+#     console.log + '**'
+#   else if counter > 10
+#     console.log counter + '*'
+#   else
+#   console.log counter
+    
+# EXERCISE 5
+# Using prompt, ask what the value of '2 + 2' is. If the answer if '4',
+#use show to say something praising. If it is '3' or '5', say 'almost!'.
+# in other cases, say something mean!
+
+prompt 'hey'
+
+
+
+
+
+## older stuff written by chris starts
 
 diskOutdated = false #boolean
 renderOutdated = true #boolean
 
 
-#converter is a constructor that creates a converter object. 
+#converter is a constructor that creates a converter object.
 #Call this object's makeHtml method to #turn Markdown into HTML:
 converter = new Markdown.Converter()
 
@@ -99,7 +121,7 @@ markdown = (s) -> converter.makeHtml(s)
 code = """
 
 ## What ctm is
-Ctm is a file format for storing 3D triangle 
+Ctm is a file format for storing 3D triangle
 meshes in a compact and versatile way.
 
 #### To run locally, clone the repo and run:
@@ -109,11 +131,11 @@ meshes in a compact and versatile way.
 
 # Understanding the code
 
-This project primarily relies on codeMirror 
+This project primarily relies on codeMirror
 to generate a text editor in the browser
 ## Example 1: Bouncing ball
 
-The **gravitational force** will accelerate an object starting at a certain 
+The **gravitational force** will accelerate an object starting at a certain
 height.
 
 Gravity (0-10, Earth surface would be about 9.81):
