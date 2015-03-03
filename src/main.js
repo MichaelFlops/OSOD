@@ -12,19 +12,26 @@ optionally a break.
   as an argument, it returns a boolean: true if the given num is greater than
   the num that was used to create the test fx, and false otherwise
  */
-var code, converter, diskOutdated, download, filePicker, greaterThan, hideCode, hideCodeButton, load, load2, markdown, outputarea, possiblyUpdate, renderOutdated, save, showCode, showCodeButton, textarea;
 
-greaterThan = function(number) {
-  return function(test) {
-    if (number > test) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+/*
+Show how a name can be added to a set, how it can be removed,
+and how you can check for it
+ */
+var code, converter, diskOutdated, download, filePicker, hideCode, hideCodeButton, load, load2, markdown, outputarea, possiblyUpdate, renderOutdated, save, set, showCode, showCodeButton, textarea;
+
+set = {
+  'Michael': true
 };
 
-console.log(greaterThan(6)(5));
+console.log(set);
+
+set['Bus Guy'] = true;
+
+console.log(set);
+
+delete set['Michael'];
+
+console.log(set);
 
 diskOutdated = false;
 

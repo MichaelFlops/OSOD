@@ -216,15 +216,29 @@ optionally a break.
   as an argument, it returns a boolean: true if the given num is greater than
   the num that was used to create the test fx, and false otherwise
 ###
+# greaterThan = (number) ->
+#   (test) ->
+#     if number > test
+#       true
+#     else
+#       false
 
-greaterThan = (number) ->
-  (test) ->
-    if number > test
-      true
-    else
-      false
+# console.log greaterThan(6) 5
 
-console.log greaterThan(6) 5
+# EXERCISE 10
+
+###
+Show how a name can be added to a set, how it can be removed,
+and how you can check for it
+###
+set = {
+  'Michael': true
+}
+console.log set
+set['Bus Guy'] = true
+console.log set
+delete set['Michael']
+console.log set
 
 ## older stuff written by chris starts
 
