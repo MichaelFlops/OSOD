@@ -25,11 +25,64 @@
 # penis = Math.max 2, 4
 # console.log penis
 
-confirm 'shall we, then?', (answer) -> answer
+# confirm 'shall we, then?', (answer) -> answer
+
+# while loop that prints 1 - 100 in a new line
+
+# i = 0
+# while i <= 100
+#   console.log i
+#   i += 1
+
+# prompt ' Tel'
 # shit = [1..10]
 # console.log shit
 
 # [1..10].map (i) -> i*2
+
+# EXERCISE 2
+# Write a program that shows the result of 2^10 power
+
+# count = 0
+# i = 1
+
+# runOnDemand = ->
+#   while count < 10
+#     i *= 2
+#     count++
+#   return i
+# console.log runOnDemand()
+# end of exercise 2
+
+
+# EXERCISE 3
+# Draw a triangle by printing out 10 lines, each with a new "#"
+# tri = ''
+# count = 0
+
+# runOnDemand = ->
+# while count < 10
+#   tri = tri + "#"
+#   console.log tri
+#   count++
+# runOnDemand()
+
+# EXERCISE 4
+# Rewrite the solutions of the prev 2 exercises to use for instead of while
+# tri = '1'
+# i = 0
+# x = 10
+# runOnDemand = -> 
+#   for count in [i...x]
+#     tri = tri + '#'
+#     console.log tri
+# runOnDemand()
+
+for counter in [0..20]
+  if counter % 3 is 0 and counter % 4 is 0
+    console.log counter
+
+console.log 40 % 10
 
 ## shit starts
 
