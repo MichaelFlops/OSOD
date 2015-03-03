@@ -168,7 +168,7 @@ optionally a break.
 #   if number < 0
 #     -number
 #   else
-#     number  
+#     number
 # absolute = (number) ->
 #   if number < 0
 #     -number
@@ -176,33 +176,55 @@ optionally a break.
 #     number
 
 # console.log absolute(-2)
+
 # EXERCISE 8
 
-# modify the fx below until it passes the test properties. 
+# modify the fx below until it passes the test properties.
 
-intensify = (n) ->
-  2
+# intensify = (n) ->
+#   if n > 0
+#     n + 2
+#   else if n < 0
+#     n -2
+#   else
+#     n
 
-runOnDemand ->
-  testPure intensify, [arbInt],
-  'intensify grows by 2 when positive',
-  (c, arg, result) ->
-    c.guard arg > 0
-    arg + 2 is result
+#  test = (n) ->
+#   testPure intensify, [arbInt],
+#   'intensify grows by 2 when positive',
+#   (c, arg, result) ->
+#     c.guard arg > 0
+#     arg + 2 is result
 
-  testPure intensify, [arbInt],
-    'intensify grow by 2 when negative',
-    (c, arg, result) ->
-      c.guard arg < 0
-      arg - 2 is result
+#   testPure intensify, [arbInt],
+#     'intensify grow by 2 when negative',
+#     (c, arg, result) ->
+#       c.guard arg < 0
+#       arg - 2 is result
 
-  testPure intensify, [arbConst(0)],
-    'only non-zero intensify grows',
-    (c, arg, result) ->
-      result is 0      
+#   testPure intensify, [arbConst(0)],
+#     'only non-zero intensify grows',
+#     (c, arg, result) ->
+#       result is 0
 
+# console.log intensify(test(2));
 
-test()
+# EXERCISE 9
+###
+  Write a fx greaterThan, that takes one argument, a number, and returns a fx
+  that represents a test.  When this returned fx is called with a single num
+  as an argument, it returns a boolean: true if the given num is greater than
+  the num that was used to create the test fx, and false otherwise
+###
+
+greaterThan = (number) ->
+  (test) ->
+    if number > test
+      true
+    else
+      false
+
+console.log greaterThan(6) 5
 
 ## older stuff written by chris starts
 

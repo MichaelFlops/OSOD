@@ -5,27 +5,26 @@ Pick a lucky num from 1 to 6 then keep rolling a simulated die, until
 your lucky number comes up. Count te number of rolls. Use a loop and
 optionally a break.
  */
-var code, converter, diskOutdated, download, filePicker, hideCode, hideCodeButton, intensify, load, load2, markdown, outputarea, possiblyUpdate, renderOutdated, save, showCode, showCodeButton, textarea;
 
-intensify = function(n) {
-  return 2;
+/*
+  Write a fx greaterThan, that takes one argument, a number, and returns a fx
+  that represents a test.  When this returned fx is called with a single num
+  as an argument, it returns a boolean: true if the given num is greater than
+  the num that was used to create the test fx, and false otherwise
+ */
+var code, converter, diskOutdated, download, filePicker, greaterThan, hideCode, hideCodeButton, load, load2, markdown, outputarea, possiblyUpdate, renderOutdated, save, showCode, showCodeButton, textarea;
+
+greaterThan = function(number) {
+  return function(test) {
+    if (number > test) {
+      return true;
+    } else {
+      return false;
+    }
+  };
 };
 
-runOnDemand(function() {
-  testPure(intensify, [arbInt], 'intensify grows by 2 when positive', function(c, arg, result) {
-    c.guard(arg > 0);
-    return arg + 2 === result;
-  });
-  testPure(intensify, [arbInt], 'intensify grow by 2 when negative', function(c, arg, result) {
-    c.guard(arg < 0);
-    return arg - 2 === result;
-  });
-  return testPure(intensify, [arbConst(0)], 'only non-zero intensify grows', function(c, arg, result) {
-    return result === 0;
-  });
-});
-
-test();
+console.log(greaterThan(6)(5));
 
 diskOutdated = false;
 
