@@ -122,7 +122,7 @@
 ###
 Pick a lucky num from 1 to 6 then keep rolling a simulated die, until
 your lucky number comes up. Count te number of rolls. Use a loop and
-optionally a break. 
+optionally a break.
 ###
 
 # luckyNum = 3
@@ -140,9 +140,69 @@ optionally a break.
 #   console.log roll = Math.floor Math.random() * 6 + 1
 #   count++
 #   if roll is luckyNumber then break
-# console.log "Luck took #{count} roll(s)"    
+# console.log "Luck took #{count} roll(s)"
+
+# luckyNumber = 3 # choose from 1 to 6
+# console.log 'Your lucky number is ' + luckyNumber
+# count = 0
+# until roll is luckyNumber
+#   console.log roll = Math.floor Math.random() * 6 + 1
+#   count++
+# console.log "You are lucky " + Math.floor(100/count) + '% of the time'
+
+# prompt 'What is your name?', '', (input) ->
+#   console.log 'Well hello ' + (input or 'dear')
+
+# power = (base, exponent) ->
+#   result = 1
+#   for count in [0...exponent]
+#     result *= base
+#   result
+
+# console.log power 2, 10
+
+# EXERCISE 7
+# Write a fx that returns the absolute value of a number
+
+# absolute = (number) ->
+#   if number < 0
+#     -number
+#   else
+#     number  
+# absolute = (number) ->
+#   if number < 0
+#     -number
+#   else
+#     number
+
+# console.log absolute(-2)
+# EXERCISE 8
+
+# modify the fx below until it passes the test properties. 
+
+intensify = (n) ->
+  2
+
+runOnDemand ->
+  testPure intensify, [arbInt],
+  'intensify grows by 2 when positive',
+  (c, arg, result) ->
+    c.guard arg > 0
+    arg + 2 is result
+
+  testPure intensify, [arbInt],
+    'intensify grow by 2 when negative',
+    (c, arg, result) ->
+      c.guard arg < 0
+      arg - 2 is result
+
+  testPure intensify, [arbConst(0)],
+    'only non-zero intensify grows',
+    (c, arg, result) ->
+      result is 0      
 
 
+test()
 
 ## older stuff written by chris starts
 

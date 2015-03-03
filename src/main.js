@@ -5,7 +5,27 @@ Pick a lucky num from 1 to 6 then keep rolling a simulated die, until
 your lucky number comes up. Count te number of rolls. Use a loop and
 optionally a break.
  */
-var code, converter, diskOutdated, download, filePicker, hideCode, hideCodeButton, load, load2, markdown, outputarea, possiblyUpdate, renderOutdated, save, showCode, showCodeButton, textarea;
+var code, converter, diskOutdated, download, filePicker, hideCode, hideCodeButton, intensify, load, load2, markdown, outputarea, possiblyUpdate, renderOutdated, save, showCode, showCodeButton, textarea;
+
+intensify = function(n) {
+  return 2;
+};
+
+runOnDemand(function() {
+  testPure(intensify, [arbInt], 'intensify grows by 2 when positive', function(c, arg, result) {
+    c.guard(arg > 0);
+    return arg + 2 === result;
+  });
+  testPure(intensify, [arbInt], 'intensify grow by 2 when negative', function(c, arg, result) {
+    c.guard(arg < 0);
+    return arg - 2 === result;
+  });
+  return testPure(intensify, [arbConst(0)], 'only non-zero intensify grows', function(c, arg, result) {
+    return result === 0;
+  });
+});
+
+test();
 
 diskOutdated = false;
 
