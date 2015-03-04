@@ -3,7 +3,7 @@
 
 __NOTE__ This repo is an alaysis / explanation of the system, as well as general improvements
 
-getting stared:
+getting started:
 
 `git clone https://github.com/MichaelFlops/OSOD`
 
