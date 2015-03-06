@@ -9,7 +9,6 @@
 # total += count for count in [1..10]
 # console.log total
 
-
 # sum = (v) -> _.reduce v, ((a,b) -> a+b), 0
 # sum[1..10]
 # console.log sum
@@ -231,14 +230,35 @@ optionally a break.
 Show how a name can be added to a set, how it can be removed,
 and how you can check for it
 ###
-set = {
-  'Michael': true
-}
-console.log set
-set['Bus Guy'] = true
-console.log set
-delete set['Michael']
-console.log set
+
+# set = {
+#   'Michael': true
+# }
+# console.log set
+# set['Bus Guy'] = true
+# console.log set
+# delete set['Michael']
+# console.log set
+
+# EXERCISE 11
+
+###
+Write a fx range that takes 1 arg, a + number, and returns an array containing
+all numbers from 0 up to and including the given number
+###
+
+# outputArray = []
+# myRange = (number) ->
+#   i = 0
+#   while i < number
+#     outputArray += outputArray[i]
+#   i++
+
+# console.log myRange(5)
+
+
+
+
 
 ## older stuff written by chris starts
 

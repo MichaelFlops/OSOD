@@ -17,21 +17,12 @@ optionally a break.
 Show how a name can be added to a set, how it can be removed,
 and how you can check for it
  */
-var code, converter, diskOutdated, download, filePicker, hideCode, hideCodeButton, load, load2, markdown, outputarea, possiblyUpdate, renderOutdated, save, set, showCode, showCodeButton, textarea;
 
-set = {
-  'Michael': true
-};
-
-console.log(set);
-
-set['Bus Guy'] = true;
-
-console.log(set);
-
-delete set['Michael'];
-
-console.log(set);
+/*
+Write a fx range that takes 1 arg, a + number, and returns an array containing
+all numbers from 0 up to and including the given number
+ */
+var code, converter, diskOutdated, download, filePicker, hideCode, hideCodeButton, load, load2, markdown, outputarea, possiblyUpdate, renderOutdated, save, showCode, showCodeButton, textarea;
 
 diskOutdated = false;
 
