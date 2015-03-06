@@ -4,12 +4,23 @@
 __NOTE__ This repo is an alaysis / explanation of the system, as well as general improvements
 
 getting started:
+#### To run locally, clone the repo and run
 
 `git clone https://github.com/MichaelFlops/OSOD`
 
 `npm install`
 
 `grunt serve`
+
+## What ctm is
+Ctm is a file format for storing 3D triangle
+meshes in a compact and versatile way.
+
+# Understanding the code
+
+This project primarily relies on codeMirror
+to generate a text editor in the browser
+## Example 1: Bouncing ball
 
 
 ## Original ReadMe below:
