@@ -2,8 +2,11 @@
 #
 # @output jQuery selector of the output element
 # @fn function which includes all the code
+
+# global object- only 1 of this (per page)
 class Context
 
+  # methods to manage the widgets
   # Create new context
   constructor: (@output, @fn) ->
     @initial = true
@@ -22,7 +25,7 @@ class Context
       throw new Exception 'Number of widgets changed during update'
     @widgets[@i++] # return widget and increment invocation count
 
-  # Run initially or for updates
+  # Run initially or for updates ******* IMPORTANT
   # Makes this context be a global variable (for "slider" calls, etc.)
   run: ->
     @i = 0
@@ -40,19 +43,24 @@ class Context
       if @i != @widgets.length
         throw new Exception 'Number of widgets changed during update'
 
+# if it's the beginning, set it to blank, otherwise se to 's'
   setSection: (s) ->
     @output = s
     @output.html '' if @initial  # clear output
 
 # Base class for all the widgets
+  # all widgets render into html and can be controlled via js interactions(in browser)
 class Widget
 
   # Update widget based on arguments and return new value
   update: -> ''
     # Override in subclasses
 
+# all classes of widget have these functions
+# polymorhism      
+
 # A slider
-class Slider extends Widget
+class Slider extends Widget # inherets from widget 
 
   constructor: (@def) ->
     @initial = true
@@ -131,6 +139,9 @@ class Histogram extends PlotSeries
       xaxis:
         renderer: $.jqplot.CategoryAxisRenderer
 
+#window is whole thing plus more in DOM, but when 'run' gets called
+
+
 window.slider = (min = 0, max = 1.0, step = 0.1, def) ->
   def = min if def is undefined
   App.ctx.ensureWidget(Slider, def).update min, max, step
@@ -151,6 +162,9 @@ window.histogram = (val = []) ->
   App.ctx.ensureWidget(Histogram).update val
 
 # Run with a given update function fn
-window.run = (fn, output = $('#output')) ->
+# Defining the fx
+# run is set to global fx that runs the context fx
+# output returns the html 
+window.run = (fn, output = $('#output')) -> # method for window
   ctx = new Context output, fn
   ctx.run()
