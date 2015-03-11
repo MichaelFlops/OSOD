@@ -3,6 +3,7 @@
 # @output jQuery selector of the output element
 # @fn function which includes all the code
 
+
 # global object- only 1 of this (per page)
 class Context
 
@@ -49,7 +50,8 @@ class Context
     @output.html '' if @initial  # clear output
 
 # Base class for all the widgets
-  # all widgets render into html and can be controlled via js interactions(in browser)
+  # all widgets render into html and can be controlled via
+  # js interactions(in browser)
 class Widget
 
   # Update widget based on arguments and return new value
@@ -57,10 +59,10 @@ class Widget
     # Override in subclasses
 
 # all classes of widget have these functions
-# polymorhism      
+# polymorhism
 
 # A slider
-class Slider extends Widget # inherets from widget 
+class Slider extends Widget # inherets from widget
 
   constructor: (@def) ->
     @initial = true
@@ -164,7 +166,7 @@ window.histogram = (val = []) ->
 # Run with a given update function fn
 # Defining the fx
 # run is set to global fx that runs the context fx
-# output returns the html 
+# output returns the html
 window.run = (fn, output = $('#output')) -> # method for window
   ctx = new Context output, fn
   ctx.run()

@@ -1,12 +1,41 @@
+###
+ Documentation for main.coffee
+ Marcelo Siero and Michael Betts
+ March 9, 2015
+
+This is an attempt at creating a super well-annotated program,
+with so much detail that it helps us learn and relearn how to
+program with Coffeescript, Javascript, and various usefule
+libraries.  Much like this project itself, annotating the program
+this way with markdown, is illustrative of some potential ideas in
+good pedagogy for the teaching Computer Science.
+
+The annotated programs are from a program written by [Christopher Schuster]
+(https://users.soe.ucsc.edu/~cschuster/),
+[Thomas Schmitz](https://users.soe.ucsc.edu/~tschmitz/),
+and Marcelo Siero, that are found in the CTM repository,
+
+Some variable to control what the program does,
+**EYE** document meaning later.
+###
+
 diskOutdated = false #boolean
 renderOutdated = true #boolean
 
 #converter is a constructor that creates a converter object.
 #Call this object's makeHtml method to #turn Markdown into HTML:
+# Create a new object called "converter" of the Markdown.Converter class
+# which is documented [here](http://code.google.com/p/pagedown/)
 converter = new Markdown.Converter()
 
+# Declare a function called markdown with argument (s) that returns
+# a call to methor convert.makeHtml(s)
 markdown = (s) -> converter.makeHtml(s)
 
+
+# Create some sample "CTM" code to start this off with
+# using a heredoc (uses """) and interpolates if needed.
+# this is an entire string
 code = """
 
 The **gravitational force** will accelerate an object starting at a certain
@@ -65,13 +94,31 @@ hideCodeButton = undefined
 filePicker = undefined
 
 # window updater, listens
+# Pre-existing object window, has a method addEventListener
+# we invoke that method, with string'beforeunload' and  a
+# callback to an anon fx with parameter (e)
+# and body of code is what follows the arrow.
+
+# Use the element.addEventListener() method to attach an event
+# handler to a specified element.
+# The event 'beforeunload' makes ref to the html
+# window.onbeforeunlad event in js.
+# docs here http://help.dottoro.com/larrqqck.php
 
 window.addEventListener('beforeunload', (e) ->
   if diskOutdated
     e.returnValue = 'Are you sure you want to leave this page?'
 )
-
+# SETS UP WINDOW (both sides)
 window.App =
+
+# In coffescript there are many ways to pass
+# parameters to a fx. I think this is calling a fx
+# or istantiatin an obj called CodeMirror with for parameters.
+# Note, in coffeescript there are many ways to pass parameters
+# to a fx. Among these if a call by name,
+# which is probabl the the value:, mode
+  
   init: ->
     textarea = CodeMirror $('#source .panel-body').get(0),
       value: code
@@ -97,6 +144,7 @@ window.App =
       console.log $("#vimmode").is(":checked")
       textarea.setOption 'vimMode', $("#vimmode").is(":checked")
 
+# fx for updating
 possiblyUpdate = ->
   if code != textarea.getValue()
     diskOutdated = true
